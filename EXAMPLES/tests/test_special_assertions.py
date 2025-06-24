@@ -19,7 +19,7 @@ def test_missing_filename():
         read_file_data(FILE_NAME)  # will pass test if file is NOT found
 
 
-def test_list():
+def test_approx():
     # fail unless values are within 0.000001 of each other
     # (actual result is 0.30000000000000004)
     assert (.1 + .2) == pytest.approx(.3)

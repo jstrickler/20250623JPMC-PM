@@ -1,5 +1,3 @@
-import pytest
-
 COUNTER_KEY = 'test_cache/counter'
 
 def test_cache(cache):  # cache persists values between test runs
@@ -17,7 +15,8 @@ def test_capsys(capsys):
     hello()  # Call function that writes text to STDOUT
     out, err = capsys.readouterr()  # Get captured output
     print("STDOUT:", out)
-
+    assert "Hello" in out
+    
 def bhello():
     print(b"Hello, binary pytesting world\n")
 
