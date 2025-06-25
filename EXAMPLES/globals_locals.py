@@ -1,7 +1,7 @@
 from pprint import pprint  # import prettyprint function
 
 # global variables
-count = 42  
+count = 42
 animal = 'Wombat'
 
 def spam(fruit):  # function parameters are local

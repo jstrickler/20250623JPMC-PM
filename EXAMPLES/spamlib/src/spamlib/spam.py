@@ -2,7 +2,7 @@
 Subjects for testing
 """
 import re
-from hamlib import ham  
+from hamlib import ham
 
 class Spam():
     def __init__(self, number):
