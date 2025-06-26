@@ -8,7 +8,7 @@ OMDB_URL = "http://www.omdbapi.com"
 
 def main():
     requests_params = {'t': 'Black Panther', "apikey": OMDB_API_KEY}
-    response = requests.get(OMDB_URL, params=requests_params)
+    response = requests.get(OMDB_URL, params=requests_params, timeout=10)
     if response.status_code == requests.codes.OK:
         raw_data = response.json()
 
@@ -21,7 +21,7 @@ def main():
         print('-' * 60)
 
         print("raw DATA:")
-        pprint(response.json())
+        pprint(response.json(), sort_dicts=False)
     else:
         print(f"response.status_code: {response.status_code}")
 
